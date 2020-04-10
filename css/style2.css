@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  background-color: #e8e8e8;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.btn{
+	display: inline-block;
+	font-size: 10px;
+	
+	
+	border-radius: 4px;
+	color: #fff;
+			background-color: #007bff;
+			text-transform: uppercase;
+	cursor: pointer;
+	border: 1px solid transparent;
+	transition: background-color 0.3s linear;
+
+	padding: 6px 12px;		
+}
+
+.btn:hover{
+	background-color: #363636;
+	border-color: #363636;
+	border: 1px solid #0062cc;
+}
+.btn2{
+	display: inline-block;
+	font-size: 10px;
+	
+	
+	border-radius: 4px;
+	color: #fff;
+	background-color: #006400;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: 1px solid transparent;
+	transition: background-color 0.3s linear;
+
+	padding: 6px 12px;			
+}
+.btn2:hover{
+	background-color: #363636;
+	border-color: #363636;
+	border: 1px solid #0062cc;
+}
+.btn3{
+	display: inline-block;
+	font-size: 10px;
+	
+	
+	border-radius: 4px;
+	color: #fff;
+	background-color: #DD4453;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: 1px solid transparent;
+	transition: background-color 0.3s linear;
+	float: right;
+	padding: 6px 12px;			
+}
+.btn3:hover{
+	background-color: #363636;
+	border-color: #363636;
+	border: 1px solid #0062cc;
+}
+#shopping-list-item {
+  width: 250px;
+}
+.form-control {
+			width: 40%;
+			padding: 7px 12px;
+			border: 1px solid #ced4da;
+			border-radius: 4px;
+			
+		}
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 130px;
+}
+
+.shopping-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.shopping-list > li {
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  padding: 20px;
+  color: #696969;
+
+}
+
+.shopping-item {
+  display: block;
+  color: grey;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.shopping-item__checked {
+  text-decoration: line-through;
+}

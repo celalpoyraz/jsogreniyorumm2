@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title> 
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li> 
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">Javascript Genel Yapısı ve Mimarisi </h2>
+					
+
+					<div class="blog-post kutu">
+				<img src="../assets/Mimari1.jpeg"> 
+					</div>
+
+					
+					<p class="blog-text">
+						
+						JavaScript ile kodlama yapmak herkesin çayı değildir. Bu nedenle, kodla başlamadan önce JavaScript Mimarisini anlamak daha iyidir. JavaScript'in web'de nasıl çalıştığını daha iyi anlar. Bugün DataFlair'in JavaScript Eğitimi'nde çeşitli JavaScript Mimarilerini tartışacağız. Eğiticiyi tamamladıktan sonra, kesinlikle JavaScript'in farklı uygulamalarda nasıl çalıştığı hakkında temel bir fikriniz olacaktır.<br>
+
+						Uygulamaların karmaşıklığı arttıkça, JavaScript için daha gelişmiş özelliklere ihtiyaç duyuldu. Geliştiricinin kullandığı mimari uygulamanın ihtiyacına bağlıdır.<br>
+
+						</p>
+
+						
+							<h2 class="blog-title">1. Tipik JavaScript Uygulama Mimarisi </h2>
+
+						<p class="blog-text">
+						Genellikle, JavaScript uygulamaları Kullanıcı Arabirimini (UI) her zaman geliştirmenin merkezine her zaman yerleştirerek aşağıdan yukarıya yaklaşımını kullanır. Şemada gösterildiği gibi , hem UI hem de Sunucu doğrudan arkadaki koda bağlanır. <br>
+
+						Bu JavaScript mimarisi basit programlar için iyi çalışır, ancak uzun vadede karmaşık programların taleplerini karşılayamaz. Özel çerçeve eklemediğiniz web sitelerinin çoğu için kullanabilirsiniz. Uygulama ekranıyla etkileşime girmek istiyorsanız bu mimari gayet iyi, ancak büyük ölçekli bir uygulamada bazı sorunlarla karşılaşabilirsiniz. Bu nedenle, bu mimariyi yatırım ve uygulamadan önce araştırmanız çok önemlidir.
+						<br>
+
+						</p>
+						<div class="blog-post kutu">
+						<img src="../assets/Mimari2.jpeg">
+					</div>
+					<h2 class="blog-title">2. Çerçeve Tabanlı Tipik JavaScript Mimarisi </h2>
+					<p class="blog-text">
+						JavaScript'in karmaşık bir mimarisine olan talep arttıkça, Çerçeve Tabanlı Mimari devreye girdi. Ana odak hala UI ekranı olmasına rağmen, önceki sürümden çok daha gelişmiş. JavaScript Uygulama Mimarisinin basit görünümünün detaylandırılmasını içerir. MVC veya MVVM modelini uygulamaya uyguladığı için karmaşık problemlerin çözümünde çok etkilidir . İş ve sunum endişeleri ayrıdır ve çalışmayı kolaylaştırır.<br>
+
+						Arkasındaki kod (Controller ve ViewModel) doğrudan UI Screen ile Bindings ve Server üzerinden Ajax üzerinden bağlanır. Kullanıcı Arayüzü Ekranı Görünüm ve HTML'den oluşur ve bu mimari geliştiricilere çok gelişmiş özellikler sağlamıştır.
+						<br>
+
+						</p>
+						<div class="blog-post kutu">
+						<img src="../assets/Mimari3.jpeg">
+					</div>
+
+					<h2 class="blog-title">3. Gelişmiş JavaScript Mimarisi </h2>
+					<p class="blog-text">
+						Basit web uygulamaları oluşturmak istediğinizde önceki mimari iyi çalışır. Ancak burada ortaya çıkan sorun, yine aynı çerçeve mimarisinde gelişmiş özellikler uygulamaya çalıştığımızdır. Basit bir çerçeveye karmaşıklık katmaya çalışıyoruz. Dolayısıyla bu mimariler daha fazla bakım ve geliştirme maliyeti olmadan büyüyemez. Önceki sürümler, her UI yazılımının yalnızca MVC veya MVVM'nin uygulanmasından sonra karşılaştığı sorunları yaşamaya başlar. Denetleyici veya Görünüm, sunucuyla doğrudan etkileşime girme ve görünümü doğrudan veya dolaylı olarak manipüle etmenin yanı sıra, bu durumun hızla başarısız olmasına yol açan birçok endişeyle meşgul.<br>
+
+						Bu tür sorunlar, geliştirmenin ilerleyen kısımlarında tespit edilir, bu nedenle alan bilgisine daha fazla odaklanmış bir mimariye ihtiyacımız vardı. JavaScript'e daha fazla özellik eklemek için daha olgun bir mimariye ihtiyaç duyuldu.<br>
+
+						Burada JavaScript'in Gelişmiş Mimarisi devreye girer. İş ve kullanıcı arayüzü endişeleri bu mimaride ayrı olduğundan, karmaşık uygulamaların ihtiyaçlarına çok kolay uyum sağlar. Ayrıca uygulamanın merkezi olarak kullanıcı arayüzünü kaldırır ve uygulamanın kullanılabilirliğini artırır.
+						<br>
+
+						</p>
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">Fonksiyonlar</h2>
+					
+
+					<p class="blog-text">
+						Sıklıkla senaryodaki birçok yerde benzer bir işlem yapmamız gerekir. <br>
+
+						Örneğin, bir ziyaretçi oturum açtığında, oturumu kapattığında ve belki başka bir yerde hoş bir mesaj göstermemiz gerekir.<br>
+
+						Fonksiyonlar programın ana “yapı taşlarıdır”. Kodun tekrar edilmeden birçok kez çağrılmasına izin verir.<br>
+
+						Zaten fonksiyonlara dair bir çok örneklerini gördük alert(message) gibi. Ancak kendi fonksiyonlarımızı  da oluşturabiliriz.<br>
+					</p>
+
+					<h2 class="blog-title">Fonksiyona Giriş</h2>
+					<p class="blog-text">
+						
+						<span style="color: #333"><i >	<strong>function showMessage() { <br>
+						  alert( 'Hello everyone!' );
+						<br>}
+
+							 </strong></span><br></i>
+					</p>
+						<p class="blog-text"> Yeni fonksiyon adıyla çağrılabilir: showMessage(). <br>
+
+							Örneğin: <br>
+							<span style="color: #333"><i >	<strong>function showMessage() { <br>
+									  alert( 'Hello everyone!' ); <br>
+									}<br>
+
+									showMessage(); <br>
+									showMessage(); <br>
+
+							 </strong></span><br></i>
+							Çağrı showMessage()işlevin kodunu yürütür. Burada mesajı iki kez göreceğiz.
+
+							Bu örnek, işlevlerin temel amaçlarından birini açıkça göstermektedir: kod çoğaltmasını önlemek.
+
+							Mesajı veya gösterilme biçimini değiştirmemiz gerekirse, kodu tek bir yerde değiştirmek yeterlidir: çıktıyı veren işlev.</p>
+
+						<h2 class="blog-title">Yerel değişkenler</h2>
+						<p class="blog-text">
+						Bir işlevin içinde bildirilen bir değişken yalnızca bu işlevin içinde görünür. <br>
+
+						Örneğin: <br><br>
+						<span style="color:  #333"><i >	<strong>function showMessage() { <br>
+							  let message = "Hello, I'm JavaScript!"; // local variable <br>
+
+							  alert( message ); <br>
+							}<br>
+
+							showMessage(); // Hello, I'm JavaScript!<br>
+
+							alert( message ); // <-- Error! değişken bir local değişkendir</strong></span><br></i><br>
+							
+
+							
+												</p>				
+
+					<h2 class="blog-title">Dış değişkenler</h2>
+					<p class="blog-text">
+						Bir işlev bir dış değişkene de erişebilir, örneğin: <br> 
+												</p>
+
+						<span style="color:  #333"><i >	<strong>let userName = 'John';<br> 
+
+								function showMessage() {<br> 
+								  let message = 'Hello, ' + userName;<br> 
+								  alert(message);<br> 
+								}
+
+								showMessage(); // Hello, John</strong></span><br></i><br>
+
+						
+				
+
+					<h2 class="blog-title">Parametreler</h2>
+					<p class="blog-text">
+						Parametreleri ( fonksiyon argümanları olarak da bilinir ) kullanarak fonksiyonlara keyfi veriler aktarabiliriz . <br>
+
+						Aşağıdaki örnekte, işlevin iki parametresi vardır: fromve text.
+												 <br>
+
+						<span style="color:  #333"><i >	<strong>function showMessage(from, text) { // argumanlar  from ve  text <br>
+						  alert(from + ': ' + text);<br>
+						}<br>
+
+						showMessage('Ann', 'Hello!'); (*) <br>
+						showMessage('Ann', "What's up?"); (**) </strong></span><br></i><br>
+					İşlev satırlarda çağrıldığında (*)ve (**)verilen değerler yerel değişkenlere fromve text. Sonra işlev bunları kullanır.</p>
+
+					
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

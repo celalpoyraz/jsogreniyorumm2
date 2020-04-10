@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">Koşul Yapıları</h2>
+					
+
+					<p class="blog-text">
+						Günlük hayatta hepimiz içinde eğer(if) geçen cümleler kurmuşuzdur.(bağlaç olan eğer :) )<br>
+
+						Eğer sınavı geçersem kutlama yapacağım.<br>
+						Eğer html öğrenirsen sonra css öğren.<br>
+
+						Görüldüğü gibi "kişinin kutlama yapmasi sinavi geçmesine bağlı"<br>
+						Css öğrenmesi "Html biliyor olmasina bağlı"<br>
+						Burdaki şartlari sağlamazsa amacina ulaşamaz.şimdi javascript dilinde olaylara bakalim<br>
+					</p>
+
+					<h2 class="blog-title">Örneklerle Daha iyi Anlayalım...</h2>
+					<p class="blog-text">
+						
+						<span style="color: #333"><i >	<strong>< script><br>
+
+		var ortalama=85;<br>
+
+		if(ortalama > 45){<br>
+			alert("Ogrenci Dersi Gecti");<br>
+		}<br>
+
+</ script><br>
+
+							 </strong></span><br></i><br>
+
+</p>
+					
+						<p class="blog-text"> 
+							Neler oldu yazalim.<br>
+							Ogrencinin ortalamasi 85,ortalama isimli degiskene atanadi<br>
+							if(kosul) soldaki yapi geregi javascript icerdeki kosulu degerlendirir<br>
+							kosulumuz ortalama > 50 bu kosul boolean turunde bir deger dondurur <br>demistik,yani true yada false<br>
+							kosul=85 > 45 kosulu geriye true döndürür<br>
+							son durum if(true)<br>
+							kosul true oldugu icin if blogu calisacaktir. (süslü parantezler içindeki kodlar)<br>
+							kosul geriye false dondurseydi if blogu hic calismayacakti<br>
+							ortalamayi 40 yap ve tekrar test et , calismadigni gor <br><br>
+						Yukardaki örneğin eksik tarafi , eğer öğrenci başarısız olduysa hiç mesaj vermemesiydi,şimdi bu sorunu çözerek else kavramini öğrenelim.</p>
+
+						<h2 class="blog-title">if-else</h2>
+						<p class="blog-text">
+						
+						<span style="color:  #333"><i >	<strong>< script><br>
+
+								var ortalama=25;<br>
+
+								if(ortalama > 45){<br>
+									alert("Ogrenci Dersi Gecti");<br>
+								}else{
+									alert("Ogrenci Dersten Kaldı!");<br>
+								}
+								<br>
+								</ script></strong></span><br></i><br>
+							
+
+							
+							</p>	
+
+							<p class="blog-text"> Neler oluyor inceleyelim:<br>
+							if(kosul) sisteminde bu defa kosul=false (25>45 karsilastirmasi false dondurur)<br>
+							Dolayisiyla if blogu hic calismadan else blogu calisacaktir<br>
+							Kisaca if kosulu dogruysa ilk blok,değilse ikinci blok calısır<br><br>
+							Şimdi ise ogrencinin notu konusunda degisik olasiliklari da hesaba katiyoruz,her blok icin alert mesaji yazdirmamak icin daha esnek bir yontem kullanacagim!.<br><br></p>			
+
+					
+					<p class="blog-text">
+						
+												
+
+						<span style="color:  #333"><i >	<strong>< script><br> 
+
+		var ortalama=25;<br> 
+		var mesaj="";		//not durumuna gore mesaji saklayacak degisken<br> 
+
+
+		//yukardaki ornekler 200 gibi deger icinde true donduruyordu<br> 
+		//bu if yapisi bunu engelliyor cunku 2 adet kosul sonucuna gore blok calisacak<br> 
+		//&& operatoru geregi 2 kosulda true dondurmeli ki sonuc true olabilsin<br> 
+
+		if(ortalama>=45 && ortalama<=100){<br> 
+
+			mesaj="Ogrenci Dersi Gecti";<br> 
+
+			//Bu blok calistiysa ogrencinin notlari 45e esit yada buyuk<br> 
+			//Ogrencinin notu 100e esit yada kucuk<br> 
+		}else{
+			mesaj="Ogrenci Dersten Kaldı";<br> 
+
+			//Bu blok calistiysa ogrencinin notu:<br> 
+			//45den kucuk olabilir (negatif sayilar bile)<br> 
+			//100den de buyuk olabilir!<br> 
+			//if kosulu saglanmadigi icin burasi otomatik calisir unutma<br> 
+		}<br> 
+
+		alert(mesaj);<br> 
+
+	< /script><br> 
+</strong></span><br></i><br></p>
+
+						
+				
+
+					<h2 class="blog-title">Javascript Koşullu Son Örneğimiz</h2>
+					<p class="blog-text">
+						Evet if else kod yapisini tamamlamak icin bu son baslik, Her adimda kodu daha yararli yapmamiza ragmen , bazi eksikler vardi simdi onlari düzeltelim.
+Ogrencinin notuna göre "Pekiyi","iyi","orta","gecer","zayıf" gibi mesajlar verelim.
+birinci if blogu yanlissa baska kosullar test etmek icin else if komutundan yararlanacagiz.
+												 <br><br>
+
+						<span style="color:  #333"><i >	<strong>< script><br>
+		var ortalama=56;<br>
+		var mesaj="";<br>
+
+		if(ortalama>=85){<br>
+			mesaj="Pekiyi";<br>
+		}else if(ortalama>=75){<br>
+			mesaj="iyi";<br>
+		}else if(ortalama>=55){<br>
+			mesaj="Orta";<br>
+		}else if(ortalama>=45){<br>
+			mesaj="Gecer";<br>
+		}else{<br>
+			mesaj="Zayıf";<br>
+		}<br>
+
+		alert(mesaj);<br>
+		
+	</ script></strong></span><br></i><br>
+					Kod nasil calisiyor:<br>
+ilk once if kosulu test edilir sonuc true if blogu calisir, diger bloklar(else if,else) atlanir ve alert mesaji verilir<br>
+if kosulu yanlissa bir sonraki else if kosulu test edilir,aynen ustteki if gibi davranilir dogruysa gecerli blok calisir ve alertte kadar herseyi atlar.<br>
+Adim adim bunlar tekrarlanir,hic bir kosul dogru degilse en son else blogu her durumda çalısır</p>
+
+					
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

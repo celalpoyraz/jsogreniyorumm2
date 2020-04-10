@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">Aritmetik</h2>
+					
+
+					<p class="blog-text">
+						Bu sayfa da JavaScript Aritmetik Operatörler hakkında  temel bilgilerden bahsetmiş olacağım sizler için.
+					</p>
+
+					<h2 class="blog-title">Toplama Operatörü</h2>
+					<p class="blog-text">
+						Operatörün solundaki değer ile sağındaki değeri matematiksel olarak toplama işlemine tabi tutmak için kullanılır. Operatör sembolü artı “+” işaretidir. <br>
+
+						Sözdizimi: degisken1 + degisken2 <br>
+
+						Örnek olarak iki adet değişken tanımlayıp bu değişken değerlerini toplama işlemine tabi tutalım;
+					</p>
+						<span style="color: red" ><strong>
+						var degisken1 = 15; <br>
+						var degisken2 = 22; <br>
+						var sonuc = degisken1 + degisken2; <br>
+						document.write(sonuc); <br>
+						</strong> </span>
+
+						<h2 class="blog-title">Çıkarma Operatörü</h2>
+						<p class="blog-text">
+						Operatörün solundaki değerden, sağındaki değeri matematiksel olarak çıkarma işlemine tabii tutar. Operatör sembolü eksi “-” işaretidir. <br>
+
+							Sözdizimi; degisken1 – degisken2; <br>
+
+							Örnek; 
+												</p>
+
+						<span style="color: red" ><strong>
+						var sayi1 = 27; <br>
+						var sayi2 = 15;<br>
+						var sonuc = sayi1 - sayi2;<br>
+						document.write(sonuc);<br>
+						</strong> </span><br>
+						<p class="blog-text">
+						Yukarıdaki kodu yazıp çalıştırdığımızda ekranda 27-15 işleminin sonucu olan 12 sayısı görünecektir. </p>
+
+				
+
+					<h2 class="blog-title">Çarpma  Operatöri</h2>
+					<p class="blog-text">
+						Çarpma operatörü, operatörün solundaki değer ile sağındaki değeri matematiksel olarak çarpma işlemine tabii tutmak için kullanılır. Operatör sembolü yıldız “*” işaretidir. 
+
+						Sözdizimi: sayi1 * sayi2; <br>
+
+						Örnek; 
+												</p><br>
+
+						<span style="color: red" ><strong>
+						var sayi1 = 15;<br>
+						var sayi2 = 4;<br>
+						var sonuc = sayi1 * sayi2;<br>
+						document.write(sonuc);<br>
+						</strong> </span>
+
+						<p class="blog-text">Yukarıdaki örnekte sayi1 değişkeni ile sayi2 değişkenini çarpıp sonucu sanuc değişkenine atadık ve “document.write()” komutu ile sonuc değişkeni değerini ekrana yazdırdık. Kodları yazıp çalıştırdığımızda ekrana 60 sayısı yazacaktır. </p>
+				
+
+					<h2 class="blog-title">Bölme Operatörü</h2>
+					<p class="blog-text">
+						Opertörün solundaki değeri, sağındaki değere bölmek için kullanılır. Operatör sembolü slash “/” işaretidir. 
+
+						Sözdizimi: sayi1/sayi2; <br>
+
+						Örnek; 
+												</p>
+
+						<span style="color: red" ><strong>
+						var sayi1 = 27; <br>
+						var sayi2 = 3;<br>
+						var sonuc = sayi1/sayi2;<br>
+						document.write(sonuc);<br>
+						</strong> </span>
+
+						<p class="blog-text">Yukarıda “sayi1” değişkeni değerini sayi2 değişkeni değerine bölüp sonuc değişkenine atadık ve sonuc değişkeni değerini “document.write()” komutu ile ekrana yazdırdık. Ekrana yazılan değer 3 sayısı oldu. </p>
+
+					
+
+					<h2 class="blog-title">Mod Operatörü</h2>
+					<p class="blog-text">
+						Mod operatörü, operatörün solundaki değerin operatörün sağındaki değere tam bölümünden kalanı almak için kullanılır. Operatör sembolü yüzde “%” işaretidir. <br>
+
+						Sözdizimi: sayi1%sayi2; <br>
+
+						Örnek; 
+												</p>
+
+						<span style="color: red" ><strong>
+						var sayi1 = 60; <br>
+						var sayi2 = 15;<br>
+						var sonuc = sayi1 % sayi2;<br>
+						document.write(sonuc);<br>
+						</strong> </span>
+
+						<p class="blog-text">Yukarıdaki örnekte 60 sayısını 15 sayısına tam böldük ve işlem sonucu kalanını alıp sonuc değişkenine atadık. Ardından sonuc değişkenini “document.write()” komutu ile ekrana yazdırdık. Ekranda yazılan değerimiz bu iki sayının tam bölümünden kalan değer olan 2 sayısı olacaktır.
+
+ 							</p>
+					
+
+					
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

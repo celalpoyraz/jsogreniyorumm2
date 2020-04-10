@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">JavaScript Giriş</h2>
+					
+
+					<p class="blog-text">
+						Bu sayfa da JavaScript hakkında temel bilgilerden bahsetmiş olacağım sizler için.
+					</p>
+
+					<h2 class="blog-title">JavaScript Nedir?</h2>
+					<p class="blog-text-3">
+						JavaScript başlangıçta “web sayfalarını canlı hale getirmek” için oluşturuldu .
+
+						Bu dildeki programlara komut dosyası denir . Doğrudan bir web sayfasının HTML'sine yazılabilir ve sayfa yüklendikçe otomatik olarak çalıştırılabilirler.
+
+						Komut dosyaları düz metin olarak sağlanır ve yürütülür. Çalıştırmak için özel hazırlık veya derlemeye ihtiyaçları yoktur.
+
+						Bu açıdan, JavaScript Java adı verilen başka bir dilden çok farklıdır .
+					</p>
+					<p class="blog-text-3">
+						<p><h3>-Neden Java Script olarak adlandırılıyor ? :</h3></p><br>
+						<p>JavaScript oluşturulduğunda, başlangıçta başka bir adı vardı: “LiveScript”. Ancak Java o zamanlar çok popülerdi, bu yüzden yeni bir dili Java'nın “küçük kardeşi” olarak konumlandırmanın yardımcı olacağına karar verildi.
+
+						Ancak geliştikçe, JavaScript ECMAScript adlı kendi belirtimiyle tamamen bağımsız bir dil haline geldi ve şimdi Java ile hiçbir ilişkisi yok.</p>
+					</p>
+
+					<p class="blog-text-3">
+						Bugün, JavaScript yalnızca tarayıcıda değil, aynı zamanda sunucuda veya aslında JavaScript motoru adı verilen özel bir programa sahip herhangi bir cihazda da çalıştırılabilir .
+
+						Tarayıcıda bazen “JavaScript sanal makinesi” adı verilen yerleşik bir motor bulunur.
+
+						Farklı motorların farklı kod kodları vardır. Örneğin:<br>
+						<ul>
+							<li>V8 - Chrome ve Opera'da.</li><br>
+							<li>SpiderMonkey - Firefox'ta.</li><br>
+							<li>… IE'nin farklı sürümleri için “Trident” ve “Chakra”, Microsoft Edge için “ChakraCore”, Safari için “Nitro” ve “SquirrelFish”<br> gibi başka kod adları da vardır.</li><br>
+						</ul>
+					</p><br><br><br>
+						<h2 class="blog-title">Özet</h2>
+							<p class="blog-text-3">
+								<ul>
+									<li>JavaScript başlangıçta yalnızca tarayıcı dili olarak oluşturulmuştur, ancak şimdi diğer birçok ortamda da kullanılmaktadır.</li><br>
+									<li>Bugün, JavaScript, HTML / CSS ile tam entegrasyon ile en yaygın olarak kabul edilen tarayıcı dili olarak benzersiz bir<br> konuma sahiptir.</li><br>
+									<li>JavaScript'e "aktarılan" ve belirli özellikler sağlayan birçok dil vardır. JavaScript konusunda uzmanlaştıktan sonra en <br>azından kısa bir süre onlara göz atmanız önerilir.</li><br>
+									</ul>
+							</p>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

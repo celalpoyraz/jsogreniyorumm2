@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../../css/style.css">
+
+	<script >
+		function forptag(){
+			var metin =document.querySelector("#ptagi").value;
+			var createElement = document.createElement("p");
+			var text = document.createTextNode(metin);
+			createElement.appendChild(text);
+			var ptaglari = document.querySelector("#ptaglari");
+
+			ptaglari.appendChild(createElement).className="blog-text";
+		
+
+			 var btn=document.createElement("button");
+            
+            btn.setAttribute("class","btn3");
+           
+            btn.innerText="X";
+            
+            btn.style.cssText="float:right"; 
+             btn.style.cssText="margin-right: 50%";
+            createElement.appendChild(btn);
+            btn.onclick=function(e){
+                e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+                
+                e.preventDefault();
+            }
+            
+            
+            
+		}
+
+		function forhtag(){
+			var metin =document.querySelector("#htagi").value;
+			var createElement = document.createElement("h3");
+			var text = document.createTextNode(metin);
+			createElement.appendChild(text);
+			var h3taglari = document.querySelector("#h3taglari");
+		
+			h3taglari.appendChild(createElement).className="blog-text";
+			
+
+			var btn=document.createElement("button");
+            
+            btn.setAttribute("class","btn3");
+           
+            btn.innerText="X";
+            
+            btn.style.cssText="float:right"; 
+            btn.style.cssText="margin-right: 50%";
+             createElement.appendChild(btn);
+            btn.onclick=function(e){
+                	
+                	 e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+                
+                e.preventDefault();
+            }
+            
+            
+           
+		}
+	</script>
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="../JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="../syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="../degiskenler.html">Değişkenler</a></li>
+				<li><a href="../operatorler.html">Operatörler</a></li>
+				<li><a href="../aritmetik.html">Aritmetik</a></li>
+				<li><a href="../veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="../fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="../events.html">Olaylar (Events)</a></li>
+				<li><a href="../islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="../kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="../donguler.html">Döngüler</a></li>
+				<li><a href="../tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="../genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="../javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="../objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">Dinamik HTML elementleri eklemek ve çıkartmak</h2>
+					
+					<div >
+						
+					</div>
+
+				<div class="form-group">
+				<label class="blog-text-2">p  Tagı  eklemek için Giriniz :</label>
+				<input type="text" id="ptagi"   class="form-control">
+				<div class="form-group">
+				
+				<button  onclick="forptag()" type="submit"  class="btn">Ekle</button>	
+			
+					</div>
+			
+			<div class="form-group">
+			<label class="blog-text-2" >h3  Tagı eklemek için Giriniz :  </label>
+			<input type="text" id="htagi" class="form-control ">
+			<button  onclick="forhtag()" type="submit"  class="btn">Ekle</button>
+		</div>
+				
+
+					<div id="ptaglari">
+						<h2 class="blog-title">P Taglarının Eklenecegi Yer :</h2>
+					</div>
+					<div id="h3taglari">
+						<h2 class="blog-title">h3 Taglarının Eklenecegi Yer :</h2>
+					</div>
+					<br><br>
+					
+					
+					<h2 class="blog-title">Yapıyı Anlatan Rapor </h2>
+					
+
+					<p class="blog-text">
+						Yukarıda yazmış olduğum yapiları size kısa kısa anlatmaya çalışacağım burada.Öncelikle bir form yapısı oluşturdum inputları koydum ve tiplerini text olarak alıp birer buton yerleştirdim.Sonra bu butonları javascript eventleri olan onclick metodunu yerleştirdim.Buraya kadar her şey güzel.Bundan sonrası için DOM yapilarını kullandık.
+						<br><br>
+						DOM yapiları javascriptin olmazsa olmazı dinamik bir yapidir ve text içerisine yazdığım metinleri formun altına ekledim ve aynı zamanda hangi tagları eklediğimide belirttim 2 tane farklı tag üzerinden göstermeye çalıştım.Ama diğer taglarıda ekleyebilirsiniz ben yapi olarak aynı olduğu için 2 taneyi yeterli buldum.
+						Şimdi biraz DOM yapilarina bakalım.Girmiş olduğum text yerini ilk önce script tagları içerisinde metin adlı bir değişkene atadım.Bu textin içindeki değeri o anki bulunduğu yerin id'sinin value değerini alarak yaptım.Sonra bu metini hangi taga ekleyeceğimi seçmek için yeni bir tag oluşturdum.Bunu da createElement metoduyla mesela bir p tagı oluşturmak istedğimi beyan ettim.Sonra bu girmiş olduğum metini bir textNode olduğunu belirtmek istedim çünkü bu metin ile p tagını bağdaştırmam gerekecekti.
+
+						<br><br>
+						Aslında burada şöyle bir şeye değinmek istiyorum burda atıyorum  4 tane elementimiz olsun ama bize javascript çıktısı ekrana 9 tane element olduğunu söylecek yani 9 tane childNode olduğunu belirtecek.Bu yapıları aslında konsoldan proto bölümünden görebilirsiniz.Yani bir tane tag oluşturuyoruz ama bu tagın içerisini ayrı bir çocuk oluşturuyor.Yani p tagı bir çocuk içindeki text ise ayrı bir çocuk elementini oluşturmaktadır.
+						<br><br>
+						Şimdi geri dönelim yapımızı anlatmaya.Bir textNode oluşturup bunu p tagıyla appendChild metoduyla bağdaştırıyoruz yani birleştiriyoruz.
+						Yani p tagını createElement adlı değişkene atamıştık bu değikeni de
+						createElement.appendChild(text) diyerek ikisini birleştirdik.
+						Sonra bu p tagını p tagları buraya eklenecek olan yerin altına eklemek için orayada appendChild metodunu kullaarak altına eklemiş olduk.
+						<br><br>
+						Gelelim silme işlemine.Silme işlemi eklemeye göre çok daha basit.İlk önce mesela p tagını eklediğimiz yere yeni bir createElement ile buton oluşturuyoruz.Bu butona bazı özellikler veriyoruz setAttribute ile sonra butona bir onclick özelliği veriyoruz yani butona tıkladığında silme işlemi gerçekleşmesi için.Sonra bu fonksiyonun içine nereyi tıkladıysa o çocuğun parentini silmesi gerekecek yeri söylüyoruz.Bunuda şöyle yapıyoruz :
+						<br><br>
+						Fonksiyona bir e parametresi atadık.Bu paremetre ile target adlı bir özelliğe eriştik.Bu target nereye tıkladıysak orayı bize verecek.Mesela butona tıkladıysak o butonun yerini bize vermiş olacak.Sonra bunun ParentElementine ulaştık target ile sonra removeChild fonksiyonuyla ve bu fonksiyonun içerisine target ile bulunduğumuz yerin parentNodu'na ulaştık ve bu sayede ekledimiz o patagının hem p tagına hem de içindeki text özelliğine ulaşıp Node'ları kaldırmış olduk.
+						<br>
+					</p>
+					
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

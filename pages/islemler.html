@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">JavaScript'te Diziler (Array)</h2>
+					
+
+					
+
+					
+					<p class="blog-text">
+						
+						Değişkenler ve Veri Türleri dersinde diziler (array) konusuna kısaca değinmiştik. Birden fazla verinin saklanması için oluşturulan değişkenlere dizi adı verilir. Dizilerin oluşturulmasındaki temel düşünce birden fazla veriye tek bir değişken altından erişebilmektir.<br>
+
+						Değişkenlerdeki her bir veriye eleman denir. Dizi elemanları indeks değerleri ile çağrılırlar. İndeks bir elemanın dizi içinde nerede yer aldığını gösterir.<br>
+
+						İndeksler bir çok programlama dilinde olduğu gibi 0'dan başlar. 0'dan başlamasının sebebi programlama dillerinin tamamen insan mantığı oluşturulmuş olduğunun göstergesidir.<br>
+
+						Dizide eleman tanımlamak için kullanılan üç yöntem vardır. İlkini sözünü ettiğim derste görmüştük.<br>
+
+						<span style="color:  #333"><i >	<strong>< script><br>
+						    var sayilar = new Array("sıfır", "bir", "iki", "üç");<br>
+						     document .write(sayilar);<br>
+						< /script>           </strong></span></i><br>
+						Bu daha önce öğrendiğimiz yöntemdir. sayilar adında 4 elemanlı bir dizi oluşturduk.<br>
+						<span style="color:  red"><i >	<strong>sıfır,bir,iki,üç    </strong></span></i><br><br>
+						<span style="color:  #333"><i >	<strong>< script><br>
+    var sayilar = new Array();<br>
+    sayilar[0] = "sıfır";<br>
+    sayilar[1] = "bir";<br>
+    sayilar[2] = "iki";<br>
+    sayilar[3] = "üç";<br>
+    document.write(sayilar);<br>
+< /script>               </strong></span></i><br><br>
+Son yöntemimizde ise sayilar adında boş bir dizi oluşturduk ve elemanlarını tek tek girdik.<br><br>
+<span style="color:  red"><i >	<strong>sıfır,bir,iki,üç    </strong></span></i><br><br>
+						</p>
+							
+
+						<h2 class="blog-title">Diziden Eleman Silme</h2>
+						<p class="blog-text">
+						splice( ) metodu: splice dilimizde iki ucu birbirine birleştirmek gibi bir anlama gelmektedir. JavaScript'te ise belirtilen index değerinden sonra silinecek eleman ya da elemanlar için kullanılır. splice metodunda replace'de olduğu iki parametre vardır. İlk parametre silinecek indeks konumunu, ikinci parametre ise indeksten sonra kaç adet elemanın silineceğini belirtir.<br>
+
+Örnek olarak <br>
+Aşağıdaki örneği deneyin.<br>
+						<span style="color:  #333"><i >	<strong>< script><br>
+    var sayilar = ["sıfır", "bir", "iki", "üç"];<br>
+    sayilar.unshift("eksi üç", "eksi iki", "eksi bir");<br>
+    sayilar.splice(0, 3);<br>
+    document.write(sayilar);<br>
+< /script>          </strong></span></i><br>
+							Biraz karışık gibi gelmiş olabilir. Burada şunu yaptık: Negatif değerli sayıları ekledik ve daha sonra bu sayıları diziden çıkardık.<br>
+							<span style="color:  red"><i >	<strong>sıfır,bir,iki,üç    </strong></span></i><br><br>
+
+							
+												</p>				
+
+					<h2 class="blog-title">Dizilerin Birleştirilmesi</h2>
+					<p class="blog-text">
+						concat( ) metodu: Birden fazla diziyi birleştirmek için kullanılır.
+						Aşağıdaki örneği deneyin. <br> 
+												</p><br>
+
+						<span style="color:  #333"><i >	<strong>< script><br>
+					    var sayilar = ["sıfır", "bir", "iki", "üç"];<br>
+					    var yaratıklar = ["zinzin", "zomzom", "zepzep"];<br>
+					    var sayilar_ve_yaratıklar = sayilar.concat(yaratıklar);<br>
+					    document.write(sayilar_ve_cinler);<br>
+					</ script>     </strong></span><br></i><br>
+					Burada sayilar ve yaratıklar adında iki dizimiz var. sayilar_ve_yaratıklar adında yeni bir dizi tanımlıyoruz ve iki dizimizi birleştiriyoruz.<br>
+					<span style="color:  red"><i >	<strong>sıfır,bir,iki,üç,zinzin,zomzom,zepzep    </strong></span></i><br><br>
+						</p><br>
+				
+
+					
+
+					
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

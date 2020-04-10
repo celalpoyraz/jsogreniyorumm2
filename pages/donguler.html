@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">Dönguler</h2>
+					
+
+					<p class="blog-text">
+						Döngüler, bir işlemin art arda yapılması için hızlı ve kolay bir yöntem sunarlar. JavaScript Rehberi'nin bu bölümünde, JavaScript içerisinde yer alan çeşitli yineleme ifadeleri anlatılacaktır.<br>
+
+Döngüleri şu şekildeki basit bir bilgisayar oyunu olarak düşünebilirsiniz: Doğu yönünde 5 adım ilerle ve devamında batı yönünde 3 adım ilerleyerek hazineyi bul. Bu fikri basitçe kodlamak gerekirse:<br>
+					</p>
+
+					<h2 class="blog-title">for döngüsü</h2>
+					<p class="blog-text">
+						Bir for döngüsü, belirlenen koşul sağlandığı sürece içerdiği komutların çalıştırılmasını sağlar. JavaScript'teki for döngüsü, Java ve C dilindeki for döngüsü ile benzerdir. For döngüsünün söz dizimi aşağıdaki şekildedir: <br>
+						
+						<span style="color: #333"><i >	<strong>< form name="selectForm"><br>
+  < p><br>
+    < label for="müzikTürleri">Sevdiğiniz müzik türlerini seçip aşağıdaki butona basınız:</ label><br>
+    < select id="müzikTürleri" name="müzikTürleri" multiple="multiple"><br>
+      < option selected="selected">Pop</ option><br>
+      < option>Rap</ option><br>
+      < option>Rock</ option><br>
+      < option>Arabesk</ option><br>
+      < option>Türk Sanat Müziği</ option><br>
+      < option>Klasik Müzik</ option><br>
+    </ select><br>
+  </ p><br>
+  < p>< input id="btn" type="button" value="Kaç tanesi seçildi?" /></p><br>
+</ form><br>
+
+< script><br>
+function kaçTane(müzikTürleri) {<br>
+  var seçilenMüzikSayısı = 0;<br>
+  for (var i = 0; i < müzikTürleri.options.length; i++) {<br>
+    if (müzikTürleri.options[i].selected) {<br>
+      seçilenMüzikSayısı++;<br>
+    }<br>
+  }<br>
+  return seçilenMüzikSayısı;<br>
+}
+<br>
+var btn = document.getElementById("btn");<br>
+btn.addEventListener("click", function(){<br>
+  alert('Seçilen müzik türü sayısı: ' + kaçTane(document.selectForm.müzikTürleri))<br>
+});<br>
+</ script><br>
+							 </strong></span><br></i><br>
+
+</p>
+					
+						
+
+						<h2 class="blog-title">do...while döngüsü</h2>
+						<p class="blog-text">
+						do...while döngüsü, belirlenen bir koşul sağlandığı sürece döngünün çalıştırılmasına olanak tanır. Bir do...while döngüsü aşağıdaki gibidir:
+						<span style="color:  #333"><i >	<strong>var i = 0;<br>
+do {<br>
+  i += 1;<br>
+  console.log(i);<br>
+} while (i < 5);</strong></span><br></i><br>
+							
+
+							
+												</p>	
+
+														
+
+					
+					
+						
+				
+
+					<h2 class="blog-title">while döngüsü</h2>
+					<p class="blog-text">
+						Bir while döngüsü, belirlenen koşul sağlandığı sürece çalıştırılmaya devam eder. Örnek bir while döngüsü aşağıdaki gibidir:
+												 <br><br>
+
+						<span style="color:  #333"><i >	<strong>var n = 0;<br>
+						var x = 0;<br>
+						while (n < 3) {<br>
+						  n++;<br>
+						  x += n;<br>
+						}</strong></span><br></i><br>
+					Her döngüde, n değişkeninin değeri 1 arttırılır ve x'e eklenir. Bunun sonucunda x ve n değişkenleri aşağıdaki değerleri alırlar:<br>
+
+					İlk kez döngü çalıştırılıp tamamlandığında: n = 1 ve x = 1<br>
+					2. kez tamamlandığında: n = 2 ve x = 3<br>
+					3. kez tamamlandığında: n = 3 ve x = 6<br>
+					3. kez döngü çalıştırılıp tamamlandığında, n < 3 koşulu artık true değerini almaz ve döngüden çıkılır.<br></p>
+
+					
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">Javascript Nesne Kavramı</h2>
+					
+
+					<p class="blog-text">
+						Javascript dünyası her ne kadar client taraflı uygulamalar için geliştirilmiş bir dil olsa da kullanıcılara nesnelerin tanımlanabildiği ve kullanılabildiği bir ortam sunmaktadır. Javscript içerisinde tanımlı kendine ait bazı nesneleri şu şeklide sıralayabiliriz. String, Date, Math, JSON v.b. Bu nesnelerin yanında kendimiz de nesneler tanımlayıp kullanabiliriz.<br>
+
+						
+					</p>
+
+					<h2 class="blog-title">Javascript Nesne Oluşturulması</h2>
+					<p class="blog-text">
+						avascript, standart olarak Object adında bir nesne sunar. Oluşturulan nesneler de Object türündedir. Örneğin bir nesnenin oluşturulmasını şu şekilde yapabiliriz. <br><br>
+						
+						var bankAccount = new Object(); <br><br>
+						Bu şekilde herhangi bir üyesi bulunmayan ve sadece “Object” tipine ait üyeleri barındıran bir bankAccount nesnesi oluşturmuş olduk. Bu nesneyi daha basit bir şekilde aşağıdaki gibi tanımlayabiliriz. <br><br>
+						var bankAccount = {}; <br><br>
+						ani Object anahtar kelimesini kullanmadan da tanımlama yapmak mümkündür.<br><br>
+
+</p>
+
+						<h2 class="blog-title">Nesnelere Property eklenmesi</h2>
+						<p class="blog-text">
+						Oluşturduğumuz nesnelere property eklenmesi işlemini aşağıdaki şeklide gerçekleştirebiliriz. <br><br>
+
+						var bankAccount = {}; <br>
+						bankAccount.number = 114521; <br> <br>
+						
+							
+						nesnelere bir değer veya fonksiyonu property olarak belirleyebiliriz. Bir property eğer bir fonksiyonu işaret ediyorsa ona metod diyebiliriz. <br><br>
+						var bankAccount = {};<br>
+					     bankAccount.number = 114521;<br>
+					     bankAccount.owner = "Bayram Üçüncü";<br>
+					     bankAccount.balance = 500;<br>
+					     bankAccount.details = function () {<br>
+					       return "Account: " + this.number +<br>
+					          " belongs to " + this.owner +<br>
+					              "\nBalance: " + this.balance;<br>
+};<br><br>
+						Yukarıda tanımladığımız bankAccount nesnesine ait “details” isimli property bir metoddur. Metodlar içerisinde kullanılan this anahtar kelimesi metodun ait olduğu nesneyi ifade eder. Bu sebeple yukaridaki “details” metodu içerisinden diğer üyelere this anahtar kelimesi ile ulaşabilmekteyiz. Metod içerisinden this anahtar kelimesini kullanmadan bir üyeye erişmeye çalışırsak hata ile karşılaşırız. <br><br>
+
+							
+												</p>	
+
+						<h2 class="blog-title">Nesne Üyelerinin Oluşturma Sırasında Eklenmesi</h2>
+						<p class="blog-text">
+							Nesneleri oluşturduktan sonra üyelerin belirlenmesi mümkün olduğu gibi, nesne oluşturulurken üyelerinin belirlenmesi de mümkündür. Kodun temiz olması açısından kullanılabilecek bir gösterim olarak değerlendirilebilir. <br><br>
+							var bankAccount = {<br>
+    						number: 114521,<br>
+    						owner: "Bayram Üçüncü",<br>
+   							balance: 500,<br>
+   							 details: function () {<br>
+            				 return "Account: " + this.number +<br>
+                   			 " belongs to " + this.owner +<br>
+                    		"\nBalance: " + this.balance;<br>
+    }<br>
+};<br><br>
+						</p>
+						<h2 class="blog-title">Constructor(kurucu metod) Kullanılması</h2>
+						<p class="blog-text">
+
+							Yukarıda tanımladığımız nesne oluşturma şeklini tekrar hatırlayalım. Basit haliyle bir nesnenin oluşturulması şu şekildeydi.<br><br>
+							var bankAccount = {}; <br><br>
+							Bu nesneye bir constructor eklemek istediğimizde ne yapmamız gereken şudur:<br><br>
+							var bankAccount = function (number, owner, balance){};<br><br>
+							Bu fonksiyon “{}” parantezlerden hemen önce belirlenmiştir. Javascript ortamında construstor fonksiyonlar property’leri this isimli nesneye atarlar. Javascript ortamındaki constructor fonksiyonlar C# veya Java’daki sınıflara benzerler. Constructor kullanarak yeni bir nesne oluşturup o nesneye <br><br>
+
+							var BankAccount = function (number, owner, balance){<br>
+						    this.number = number,<br>
+						    this.owner = owner,<br>
+						    this.balance = balance,<br>
+						    this.details = function() {<br>
+						      return "Account: " + this.number +<br>
+						             " belongs to " + this.owner +<br>
+						             "\nBalance: " + this.balance;<br>
+						    };<br>
+						 };<br><br>
+
+						 Oluşturduğumuz bu nesneyi şu şeklide kullanabiliriz. <br><br>
+
+						 var myAccount = new BankAccount(914521, "Bayram Üçüncü", 500);
+						 <br><br>
+
+						 Constructor fonksiyonu tanımladıktan sonra nesne örneğinizi oluşturmak için “new” operatörünü kullanabilirsiniz. Oluşturduğunuz bu nesne örneğinin property’lerine ulaşabilirsiniz.<br><br>
+
+
+
+
+						</p>
+
+							<h2 > Ödev Başlıklarına Aşağıdan Ulaşabilirsiniz</h2>
+
+							<a href="hw2examples/jsdom.html">Web Sayfalarına Dinamik Olarak HTML Elementleri Eklemek.</a>	<br><br>
+							<a href="hw2examples/adamasmaca.html">Adam Asmaca Oyunu</a>	<br><br>
+							<a href="hw2examples/kullaniciformu.html"> JavaScript ile Kullanıcı Formu Doğrulama</a>	<br><br>
+							<a href="hw2examples/alisverislistesi.html">Alışveris Listesi Örneği.</a>			<br><br>			
+
+					
+					
+						
+				
+
+					
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

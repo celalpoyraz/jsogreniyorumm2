@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">JavaScript Veri Türleri</h2>
+					
+
+					<p class="blog-text">
+						JavaScript dilinde birçok değişken türü bulunur.  Bu değişken türleri içerisinde birçok veri tipi saklayabilir. Bu veri tiplerinden bazıları; sayısal, metin, mantıksal, dizeler ve objelerdir.
+					</p>
+
+					<h2 class="blog-title">String Veri Tipi(Metin)</h2>
+					<p class="blog-text">
+						String veri tipi içerisinde metinsel ifadeleri saklar. String veriler değişkenlere girilirken (“) tırnak işareti ya da (‘) kesme işareti kullanılır. <br> <br>
+						<span style="color: blue"><i >	<strong>var isim=”ornek”;       // doğru kullanım <br>
+
+							var soyisim=’egitim sitesi’;    // doğru kullanım </strong></span><br></i>
+					</p>
+						
+
+						<h2 class="blog-title">Number Veri Tipi(Sayısal)</h2>
+						<p class="blog-text">
+						Numbers veri tipi içerisinde sayısal değerleri tutmak için kullanılır. Değerler tanımlanırken (“) çift tırnak veya (‘) tek tırnak işaretine ihtiyaç yoktur. <br><br>
+						<span style="color: blue"><i >	<strong>var a=1;   // doğru kullanım <br>
+
+							var pi=3.14;   // doğru kullanım ondalıklı sayı</strong></span><br></i><br>
+							Ondalıklı sayı değeri tanımlanırken (.) nokta işareti kullanılır. <br>
+
+							
+												</p>				
+
+					<h2 class="blog-title">Boolean Veri Tipi(Mantıksal)</h2>
+					<p class="blog-text">
+						Bazı ifadeler sadece iki alternatiflidir. İfade ya doğrudur(true) ya da yanlıştır(false). Bu tip değişkenlere boolean ifadeler ismi verilir. Mantıksal veriler koşul gerektiren ifadeler için kullanılır. <br> 
+												</p>
+
+						<span style="color: blue"><i >	<strong>var a = true;  // doğru kullanım <br>
+
+						var b = false;  // doğru kullanım</strong></span><br></i><br>
+
+						
+				
+
+					<h2 class="blog-title">Array Verisi(Dizi)</h2>
+					<p class="blog-text">
+						Dizi bir veri tipinde birden fazla değer içerir. Dizi oluşturulurken köşeli parantez kullanılır ve değerler (,) ile ayrılır.
+												</p> <br>
+
+						<span style="color: blue"><i >	<strong>var sehir=[“İstanbul”,” Ankara”, ”İzmir”];  // Yazı dizisi <br>
+
+						var sayi=[ 11111, 222222, 333333];   // Sayı dizisi</strong></span><br></i><br>
+					
+
+					<h2 class="blog-title">Veri İkilileri (Nesneler)</h2>
+					<p class="blog-text">
+						Nesneler alt değişken verilerini içerisinde tutar. Alt değişkenler sıralanırken kıvrım parantezler kullanılır. Değişkenler virgüllerle ayrılarak yazılır. <br>
+
+						<span style="color: blue"><i >	<strong>var site = {  isim:”lifeacode”, içerik:”eğitim” };   // doğru kullanım </strong></span><br></i><br>
+												</p>
+
+						
+					<h2 class="blog-title">Veri Türünü Tespit Etmek (typeof)</h2>
+					<p class="blog-text">
+						Typeof operatörü kullanılarak bir değişkenin türü sorgulanabilir.Typeof operatörü kullanılarak bir değişkenin türü sorgulanabilir. <br> <br>
+
+						<span style="color: blue"><i >	<strong>typeof “lifeacode”   //string <br>
+
+						typeof “123”   //number <br>
+
+						typeof true   //boolean <br>
+
+						typeof [1855,4785,5412,5698]   //object<br>
+
+						typeof {isim: ‘lifeacode’, içerik:”eğitim”}   //object </strong></span><br></i><br>
+												</p>
+						
+					
+
+					
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

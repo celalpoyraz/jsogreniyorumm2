@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">JavaScript Syntax Yapısı</h2>
+					
+
+					<p class="blog-text">
+						Bu sayfa da JavaScript Syntax yapısı hakkında temel bilgilerden bahsetmiş olacağım sizler için.
+					</p>
+
+					
+					<p class="blog-text-3">
+						JavaScript’in yazılım kurallarının (Syntax) çoğu JAVA programlamaya benzer ancak JavaScript aynı zamanda Perl ve Python’dan da etkilenir. JavaScript karakter kümesi olarak Unicode
+						Unicode (Evrensel Kod) Unicode Consortium organizasyonu tarafından geliştirilen ve her karaktere bir sayı değeri karşılığı atayan bir endüstri standardıdır.
+						karakter kümesi kullanılır. Fakat, bu her Unicode kodlamasının görüntüleneceği anlamına gelmez. Karakterin “Glyph” (Kılıf) ad verilen görüntüsünün de belge çözümleyicinin içinde tanımlanmış olması gerekmektedir. Doğal olarak bu olasılık az kullanılan arkaik diller için geçerlidir. Batı dillerine ait tüm karakterler sorunsuzca görüntülenecektir. Diğer dillerinde karakter kodları çözümleyicilere eklenmeye devam etmektedir. <br><br>
+
+						JavaScript programlama dilinde Unicode karakterlerinin desteklenmesi, JavaScript programlarında, değişken isimler, fonksiyon isimleri gibi kullanıcı tanımlı her değişken ve nesnenin Türkçe isimlerle tanıtılıp çağırılabileceği anlamına gelir. Bu yerel olarak programın anlaşılabilirliliğini arttırır, fakat uluslararası ortamlarda, yerel diller ile yazılmış programların anlaşılabilililiği oldukça azalır.<br><br>
+
+						JavaScript dilinde alfanumeric değişkenler ve düzenli ifadeler (RegExp) gereği olmadıkça, her türlü boşluk, satır aralığı ve tab karakterlerini göz ardı eder. bu nedenle, kendimiz için en anlamlı kod düzenlemelerini yaparak, program yazım konforuna sahip oluruz. JavaScript programlama dili, Algol/Pascal/ADA serbest yazım formunu aynen destekler. Yazım yöntemi çok esnek olmasına karşın, alışkanlıktan kaynaklanan belirli kalıplar içinde kalmanın oldukça yararı vardır. Çünkü yazılmış olan kodun veya kod bloğunun ileride bakımı için bize büyük kolaylıklar sağlayacaktır.<br><br>
+
+						JavaScript programlama dilinde, bazı program dillerinde olduğu gibi, blok içinde alınmış kodlar, yeni bir kapsam alanı yaratmazlar. JavaScript yorumlayıcısı, bildirim bekleyen if gibi program öğelerine tek bildirim yerine birden çok bildirim belirtilmesi için çalıştırılacak bildirimlerin bir bildirim bloğu { } içine alınmasını öngörmüştür. Bildirim bloğunda kullanılacak program adımları bellidir ve bunlarda kullanılacak bildirim bloğu { }’nun amacı, içeriğine yeni bir kapsam açmak değil, içeriği olan bildirimlerin sıra ile çalıştırılmasını sağlamaktır.<br><br>
+
+						JavaScript’te bütün değikenler harf, alt çizgi veya ( _  veya altbağlaç ) veya dolar ( $ ) işareti ile başlar. Rakamlar ve diğer karakterler bu üç karakterden sonra kullanılır. Değişkenler $ işareti ile başlatılabilmesine karşın güncel kullanımda bu olanak sadece makine tarafından oluşturulan otomatik JavaScript kodlarına bırakılmaktadır. Yani insanlar tarafından oluşturulan kodlarda, önleyici hiç bir kural olmamasına karşın, değişken isimlerinde $ karakteri pek kullanılmamaktadır.<br><br>
+
+						JavaScript büyük küçük harf duyarlıdır (Case Sensitive). Yani aynı isimde hem büyük harfle hemde küçük harfle değişken oluşturursanız JavaScript bu iki değişkeni ayrı ayrı yorumlar. Örnek icerik, Icerik veya ICERIK değişkenler birbirinden farklıdır ve farklı şekilde yorumlanacaktır. JavaScript’te aşağıda belirtilen rezerv edilmiş anahtar kelimelerden oluşan değişken oluşturamazsınız. Son olarak tek tırnak ile çift tırnak arasında herhangi bir fark yoktur. Dikkat edilmesi gereken eğer tek tırnak ile başlarsanız tek tırnak, çift tırnak ile başlarsanız çift tırnak içeriğinizi bitirmenizdir.<br><br>
+
+						<h2 class="blog-title">JavaScript’te Yorum Satırı Ekleme</h2>
+					</p>
+					<p class="blog-text-3">
+
+						Javascript’te yorum satırı ekme tıpkı C++ ve diğer dillerde olduğu gibidir. Programcıların yazmış oldukları kodları açıklamak için kullandığı ve kodun içinde yazdıkları kimi zaman çok büyük olan metinlerdir. Gerek fonksiyonlarda gerekse değişkenlerde yorum veya açıklama satırı kullanılarak fonksiyonun veya değişkenin ne tür iş yaptığını veya ne tür bir çıktı verdiğini belirtilir. Tek satır açıklama yazmak için satırın başına // metin yazmanı yeterliyken birden fazla satırlı yorum veya açıklama yazmak için metninizi   /*  metin   */  şeklinde yazmalısınız. Yorumlar ve açıklama satırları yorumlayıcılar (interpreter) tarafından dikkate alınmaz. Dolayısıyla sisteminize de herhangi bir işlem yükü getirmeyecektir. Programcılar yazmış oldukları fonksiyonları ve değişkenleri daha sonra hatırlamak veya başkalarının da rahat bir şekilde okuyabilmeleri için yorum ve açıklama satırlarına önem verirler.
+					</p>
+
+					<div class="blog-post kutu">
+				<img src="../assets/yorum.jpeg">
+					</div>
+
+					<h2 class="blog-title">Örnek Hello Word Uygulaması</h2>
+					<p class="blog-text-3">
+						JavaScript programları, < script> etiket yardımı ile bir HTML belgesinin herhangi bir bölümüne eklenebilir .
+					</p>
+					<div class="blog-post kutu">
+				<img src="../assets/scriptt.jpeg">
+					</div>
+
+						<h2 class="blog-title">Attributes</h2>
+							<p class="blog-text-3">
+								< script>Etiket nadiren günümüzde kullanılmaktadır, ancak hala eski kod bulunabilir birkaç özelliklere sahiptir:
+
+								<h3>< script type=…></h3><br>
+								Eski HTML standardı olan HTML4 için bir komut dosyasının bulunması gerekiyordu type. Genellikle öyleydi type="text/javascript". Artık gerekli değil. Ayrıca, modern HTML standardı bu özelliğin anlamını tamamen değiştirdi. Artık JavaScript modülleri için kullanılabilir. Ama bu ileri bir konu, öğreticinin başka bir bölümündeki modüller hakkında konuşacağız.<br><br>
+
+								<h3>< script language=…></h3><br>
+								Bu özelliğin komut dosyasının dilini göstermesi amaçlanmıştır. JavaScript varsayılan dil olduğu için bu özellik artık mantıklı değil. Kullanmaya gerek yoktur.
+							</p>
+					<br>
+					<br>
+					<br>
+					
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

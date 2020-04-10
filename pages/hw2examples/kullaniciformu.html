@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/kullanicistyle.css">
+</head>
+<body>
+<h1  style="font-size: 55px;"><center>JavaScript Kullanıcı Formu</center>   </h1>
+
+	<div class="container"><br>
+		
+		<div class="form-group clearfix">
+			<div id="forms">
+			<form onsubmit="return dogrula()" >
+				
+				<div class="form-group">
+					<div class="col-25">
+				<label >Kullanıcı Adı</label>
+			</div>
+			<div class="col-75">
+					<input type="text" name="user" class="form-control" id="user" autocomplete="off">
+					<span id="username" > </span>
+				</div>
+
+				</div>
+				<div class="form-group clearfix">
+					<div class="col-25">
+					<label > TC Kimlik No: </label></div>
+					<div class="col-75">
+					<input type="text" name="tc" class="form-control" id="tc" autocomplete="off">
+					<span id="tcids"> </span>
+				</div>
+				</div>
+				<div class="form-group clearfix">
+			<div class="col-25">
+				<label >Password</label>
+			</div>
+			<div class="col-75">
+
+					<input type="text" name="pass" class="form-control" id="pass" autocomplete="off">
+					<span id="passwords" > </span>
+				</div>
+				</div>
+
+				<div class="form-group clearfix">
+					<div class="col-25">
+					<label >Password Dogrula: </label>
+					</div>
+					<div class="col-75">
+					<input type="text" class="form-control" id="conpass" autocomplete="off">
+					<span id="confrmpass" > </span>
+				</div>
+				</div>
+				
+
+				<div class="form-group clearfix">
+					<div class="col-25">
+					<label > Telefon No: </label></div>
+					<div class="col-75">
+					<input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off">
+					<span id="mobileno" c> </span>
+				</div>
+				</div>
+
+				<div class="form-group clearfix">
+					<div class="col-25">
+					<label class="font-weight-bold"> Email: </label></div>
+					<div class="col-75">
+					<input type="email" name="email" class="form-control" id="emails" autocomplete="off">
+					<span id="emailids" > </span>
+				</div>
+				</div>
+
+				<input type="submit" value="Kaydet" class="btn" style="margin-left: 30%;">
+
+
+			</form><br><br>
+		</div>
+
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		
+
+		function dogrula(){
+
+			var user = document.getElementById('user').value;
+			var pass = document.getElementById('pass').value;
+			var confirmpass = document.getElementById('conpass').value;
+			var mobileNumber = document.getElementById('mobileNumber').value;
+			var emails = document.getElementById('emails').value;
+			var tc =document.getElementById('tc').value;
+
+			if(user == ""){
+				document.getElementById('username').innerHTML =" Lütfen kullanıcı adını boş geçmeyiniz.";
+
+				return false;
+			}
+			if((user.length <= 2) || (user.length > 20)) {
+				document.getElementById('username').innerHTML =" Kullanıcı adı 2 ile 20 karekter uzunluğunda olmalıdır.";
+				return false;	
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML =" Sadece karekter kullanabilirsiniz.";
+				return false;
+			}
+			
+
+			if(pass == ""){
+				document.getElementById('passwords').innerHTML ="  Lütfen password alanını boş geçmeyiniz.";
+				return false;
+			}
+			if((pass.length <= 5) || (pass.length > 20)) {
+				document.getElementById('passwords').innerHTML =" Password uzunluğu 5 ile 20 karekter uzunluğunda olmalıdır.";
+				return false;	
+			}
+
+
+			if(pass!=confirmpass){
+				document.getElementById('confrmpass').innerHTML =" Password ile password doğrulama eşleşmiyor.";
+				return false;
+			}
+
+
+
+			if(confirmpass == ""){
+				document.getElementById('confrmpass').innerHTML =" Lütfen password doğrulama alanını boş geçmeyiniz.";
+				return false;
+			}
+
+
+
+
+			if(mobileNumber == ""){
+				document.getElementById('mobileno').innerHTML =" Lütfen telefon no alanını boş geçmeyiniz.";
+				return false;
+			}
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" Lütfen sadece rakamsal değerler giriniz.";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobileno').innerHTML =" Telefon no 10 rakam uzunluğunda olmalıdır.";
+				return false;
+			}
+
+			if(tc == ""){
+				document.getElementById('tcids').innerHTML =" Lütfen TC alanını boş geçmeyiniz.";
+				return false;
+			}
+			if(isNaN(tc)){
+				document.getElementById('tcids').innerHTML =" Sadece rakam giriniz.";
+				return false;
+			}
+			if(tc.length!=11){
+				document.getElementById('tcids').innerHTML =" TC kimlik numarası 11 karekter uzunluğunda olmalıdır.";
+				return false;
+			}
+
+			if(emails == ""){
+				document.getElementById('emailids').innerHTML ="  Lütfen e-mail alanını doldurun.";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailids').innerHTML =" @ konumu olup olmadığını kontrol ediniz.";
+				return false;
+			}
+
+			if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+				document.getElementById('emailids').innerHTML =" Geçersiz Konum lütfen bilgilerinizi kontrol ediniz.";
+				return false;
+			}
+			
+		}
+
+	</script>
+
+</body>
+</html>

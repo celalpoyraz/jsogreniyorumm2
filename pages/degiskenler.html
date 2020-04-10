@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">Değişkenler</h2>
+					
+
+					<p class="blog-text">
+						Bu sayfa da JavaScript Değişkeler yapısı hakkında temel bilgilerden bahsetmiş olacağım sizler için.
+					</p>
+
+					
+					<p class="blog-text-3">
+						Variables, değişkenler, herhangi değeri saklayabileceğiniz ve ismini kendimizin belirlediği bir nevi veri depolarıdır. Bir değişkeni tanımlamaya var, let anahtar kelimesi kullanarak başlanılır, ardından da değişkenin ismi yazılır. <br><br>
+						<span style="color: red" ><strong>var  myVariable;</strong> </span>
+
+						
+					</p>
+					<p class="blog-text-3">
+
+						JavaScript’teki bütün ifadeler noktalı virgül ile bitmelidir. Eğer noktalı virgül koymadığınız taktirde beklenmeyen hatalar veya sonuçlar ile karşılaşılabilir.
+						slında bir değişken tanımlarken satırın sonuna noktalı virgül koymak şart değildir. JS yorumlayıcılar satırının sonunu escape chacter marifetiyle bulur. Fakat ilerde .js dosyalarımızın boyutlarını küçülmek için kullanacağımız JSMinifier, YUI Comporessor tarzı uygulamalar satırın sonundaki escape character ‘i ( n ) sildiği için kodunuzda hata çıkma olasığı yüksektir. <br> <br>
+
+						JavaScript büyük-küçük karakterler konusunda hassas bir dildir. Bu nedenle
+						degisken ile 
+						Degisken
+						aynı şey değildir. Eğer herhangi problem yaşamak istemiyorsanız bu kurala mutlaka dikkat edin. <br><br>
+
+						Bir değişkeni tanımladıktan sonra ona bir değer verebilirsiniz. <br><br>
+						<span style="color: red" ><strong>myVariable = 'Bob';</strong> </span> 
+						Bu işlemleri dilerseniz tek satırda da yapabilirsiniz.
+						<span style="color: red" ><strong>var myVariable = 'Bob'; </strong> </span> 
+
+						Bir değişkenin sadece ismini yazarak çağırabilirsiniz. <br><br>
+						<span style="color: red" ><strong>myVariable;  </strong> </span> <br><br>
+					</p> 
+
+					Bir değişkene daha önce bir değer verdikten sonra bu değeri değiştirebilirsiniz. <br><br>
+						<span style="color: red" ><strong>var myVariable = 'Bob';  <br>
+						myVariable = 'Steve';  </strong> </span> <br><br>
+
+					</p> 
+
+					
+
+					<h2 class="blog-title">String Değerler</h2>
+					<p class="blog-text-3">
+						Bir string değişken çift tırnak ( ” ) veya tek tırnak ( ‘ ) arasında bulunan sıfır veya daha fazla karakterin yer almasıyla oluşur. Bir string değer hangi tip tırnak ile başlamış ise aynı tipteki tırnak ile sonlandırılmalıdır. Bu nedenle karakterleri kapsayan tırnaklar ya çift tırnak ya da tek tırnak içine alınır. Aşağıdaki örnekte string değerler ifade edilmiştir.
+
+						<span style="color: red" ><strong>"elma"  <br>
+												'armut'  <br>
+												"1234"  <br>
+												"bir satır n diğer satır"  <br>
+												"Zafer'in kedisi"    <br>
+						  </strong> </span> 
+					</p>
+
+
+
+						<h2 class="blog-title">Tam Sayılar</h2>
+							<p class="blog-text-3">
+								Tam sayılar; ikilik (binary) (2 tabanında), sekizlik (octal) (8 tabanında), onluk (decimal) (10 tabanında) ve onaltılık (hexadecimal) (16 tabanında) temsil edilirler.
+
+								Başında 0b (veya 0B) yer alan tam sayı ifadeleri ikiliktirler. İkilik tam sayılar sadece 0 ve 1 rakamlardan oluşur.
+								Başında 0 (sıfır) yer alan tam sayı ifadeleri sekizliktirler. Sekizlik tamsayılar sadece (0-7) arasında rakamlardan oluşur.
+								Onluktam sayı değeri, 0 (sıfır) ile başlamayan rakamlardan oluşurlar.
+								Başında 0x (veya 0X) yer alan tam sayı ifadeleri onaltılıktırlar. Onaltılık tam sayılar, 0-9 arasındaki rakamları içerebilidiği gibi aynı zamanda a-f veya A-F arasındaki harfleri de barındırabilirler.
+							</p>
+					
+
+					<h2 class="blog-title">Ondalık  Sayılar</h2>
+							<p class="blog-text-3">
+								Bir ondalıklı değer;
+
+							İşaretli olabilen bir onluk sayı ( ” + ” veya ”  – ” ile başlayabilir),
+							Bir nokta ( ” . ” ),
+							Ondalık (noktadan sonra diğer onluk sayı),
+							Bir katsayı.
+							kısımları içerebilir.
+
+							Katsayı kısmı bir “e” veya “E” karakteridir ve devamında işaretli olabilen bir tamsayı gelir. Ondalıklı değerin tanımlanabilmesi için en az bir rakam ve devamında ondalıklı sayı ve katsayı”e” (veya “E”) içermelidir.
+							</p>
+					
+
+					<h2 class="blog-title">Boolean Değerler</h2>
+							<p class="blog-text-3">
+								Boolean tipinde iki çeşit değer bulunur. true (doğru) veya false (yanlış).
+
+								Boolean (primitif) tipindeki değerler olan true ve false ile Boolean türü olan true ve false değerlerini karıştırmayınız. Boolean türü bir nesnedir, boolean türündeki veri tipinin alınması ve üzerine bazı ek özellikler getirilmesiyle oluşturulmuştur.
+							</p>
+					
+
+					<h2 class="blog-title">Dizi Değerler</h2>
+							<p class="blog-text-3">
+								Bir dizi değeri 0 (sıfır) veya daha fazla ifadeden oluşan bir liste biçimindeki değişkenlerdir. Liste başında ve sonunda listeyi açıp / kapatan köşeli parantezler [  ] bulunur. Bir dizi oluşturup bu diziye değerler atadığınızda, belirlediğiniz değerleri kendi elemanı olarak barındıran bir dizi üretilir ve dizinin uzunluğu belirlediğiniz değer sayısı kadardır. <br><br>
+								Aşağıdaki örnekte, 3 elemanı barındıran ve bu nedenle 3 uzunluğunda olan kahveler isimli bir dizi oluşturulmaktadır: <br><br>
+
+								<span style="color: red" ><strong>var kahveler = ["Türk kahvesi", "Espresso", "Mocha"];    </strong> </span> <br><br>
+
+								Eğer bir dizi, üst seviye blokta sabit bir değer kullanılarak oluşturulmuşsa JavaScript, bu diziyi içeren her ifadeyi çalıştırdığında diziyi yorumlar. Buna ek olarak, fonksiyon içerisinde tanımlanan diziler, her fonksiyon çağırımında yeni bir dizi olarak bellekte oluşturulur.
+
+								Dizi değerleri ayrıca Array nesneleridir.
+
+								Dizi tanımlarken her değeri belirtmek zorunda değilsiniz. Eğer iki tane virgülü art arda koyarak dizi oluşturursanız, virgüller arasında kalan tanımlanmayan her değer için undefined değeri üretilir. <br> <br>
+
+								<span style="color: red" ><strong>var balik = ["Japon", , "Melek"];     </strong> </span> 
+							</p>
+				
+
+					<h2 class="blog-title">Nesne Değeri</h2>
+							<p class="blog-text-3">
+								Bir nesne değişkeni, süslü parantezlerle { } çevrili sıfır veya daha fazla özellik ismi ve bu özellikler ile ilişkili değerleri içeren bir listeden oluşur. Bir kod satırının başlangıcında değişken ismi olmadan sadece süslü parantezler ile başlayarak bir nesne oluşturmamanız gerekmektedir. Eğer oluşturursanız, JavaScript nesne başlangıcındaki { karakterini, bir kod bloğuna başlangıç yapılıyormuş gibi yorumlar ve bunun sonucunda ya bir hata mesajı alırsınız, yada yazdığınız kod beklendiği gibi çalışmaz. <br>
+
+
+
+								
+
+							</p>
+					<br>
+					<br>
+					<br>
+					
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

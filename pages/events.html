@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>İnternet Teknolojileri Uzaktan Eğitim Ödevi</title>
+
+	<style>
+		ul {
+			list-style: none;
+		
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-right: 1px;
+		}
+
+
+		li a {
+			display: block;
+			background: #2f3036;
+			min-width: 140px;
+			color: #fff;
+			text-decoration: none;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		li a:hover {
+			background: #19C589;
+		}
+
+		li:hover ul a {
+			background: #f3f3f3;
+			color: black;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		li:hover ul a:hover {
+			background: #19C589;
+			color: #fff;
+		}
+
+		li ul li {
+			display: block;
+			float: none;
+		}
+
+		li ul li a {
+			text-align: left;
+			min-width: 100px;
+			padding: 0 20px;
+		}
+
+		li:hover a {
+			background: #19C589;
+		}
+
+		li ul {
+			display: none;
+		}
+
+		ul li a:hover+.hidden,
+		.hidden:hover {
+			display: block;
+		}
+
+	</style>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="icerik">
+	<ul>
+		<li>
+			<a href="../index.html">Anasayfa</a>
+		</li>
+		
+		<li>
+			<a href="#">Kurslar</a>
+			<ul class="hidden">
+				<li><a href="JavaScriptGiris.html">JavaScript Giriş</a></li>
+				<li><a href="syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+				<li><a href="degiskenler.html">Değişkenler</a></li>
+				<li><a href="operatorler.html">Operatörler</a></li>
+				<li><a href="aritmetik.html">Aritmetik</a></li>
+				<li><a href="veritipleri.html">Veri Tipleri</a></li>
+				<li><a href="fonksiyonlar.html">Fonksiyon Yapısı</a></li>
+				<li><a href="events.html">Olaylar (Events)</a></li>
+				<li><a href="islemler.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+				<li><a href="kosulyapilari.html">If koşul yapıları</a></li>
+				<li><a href="donguler.html">Döngüler</a></li>
+				<li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+				<li><a href="genelyapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+				<li><a href="javascriptDOM.html">JavaScript DOM</a></li>
+				<li><a href="objectmodel.html">JavaScript Object Model</a></li>
+			</ul>
+
+		</li>
+		
+
+
+	</ul>
+	</div>
+	<div class="icerik mt20">
+
+		<div id="blog-post-icerik">
+
+			<div class="blog-post kutu">
+				
+				<div class="blog-post-body p20">
+					<h2 class="blog-title">Events(Olaylar)</h2>
+					
+
+					
+
+					<h2 class="blog-title">Event Nedir?</h2>
+					<p class="blog-text">
+						
+						JavaScript'in HTML ile etkileşimi, kullanıcı veya tarayıcı bir sayfayı değiştirdiğinde meydana gelen olaylar aracılığıyla gerçekleştirilir.<br>
+
+						Sayfa yüklendiğinde buna olay adı verilir. Kullanıcı bir düğmeyi tıkladığında, bu tıklama da bir olaydır. Diğer örnekler arasında herhangi bir tuşa basma, pencereyi kapatma, pencereyi yeniden boyutlandırma vb. Gibi etkinlikler yer alır.<br>
+
+						Geliştiriciler bu olayları, düğmelerin pencereleri kapatmasına, kullanıcılara görüntülenecek mesajlara, verilerin doğrulanmasına ve akla gelebilecek diğer tüm yanıt türlerine neden olan JavaScript kodlu yanıtları yürütmek için kullanabilirler.<br>
+
+						Etkinlikler, Belge Nesne Modeli (DOM) Düzey 3'ün bir parçasıdır ve her HTML öğesi, JavaScript Kodunu tetikleyebilecek bir dizi etkinlik içerir.<br>
+						
+							
+
+						<h2 class="blog-title">onclick Event Türü</h2>
+						<p class="blog-text">
+						Bu, kullanıcı faresinin sol düğmesini tıklattığında oluşan en sık kullanılan olay türüdür. Bu olay türüne karşı doğrulama, uyarı vb. Koyabilirsiniz.<br>
+
+Örnek olarak <br>
+Aşağıdaki örneği deneyin.<br>
+						<span style="color:  #333"><i >	<strong>< html>
+   < head>   <br>
+      < script type = "text/javascript"><br>
+         < !--<br>
+            function sayHello() {<br>
+               alert("Hello World")<br>
+            }<br>
+         //--><br>
+      < /script>  <br>    
+   < /head><br>
+   
+   < body><br>
+      < p>Click the following button and see result</ p>      <br>
+      < form><br>
+         < input type = "button" onclick = "sayHello()" value = "Say Hello" /><br>
+      < /form>      <br>
+   </ body><br>
+</ html></strong></span></i>
+							
+
+							
+												</p>				
+
+					<h2 class="blog-title">onsubmit Event Türü</h2>
+					<p class="blog-text">
+						onsubmit , bir form göndermeye çalıştığınızda oluşan bir olaydır. Form doğrulamanızı bu olay türüne karşı koyabilirsiniz.<br>
+
+						Misal<br>
+						Aşağıdaki örnek, onsubmit'in nasıl kullanılacağını gösterir. Burada , web sunucusuna bir form verisi göndermeden önce bir validate () işlevi çağırıyoruz . Eğer validate () , form sunulacaktır işlevini verir true, aksi takdirde veri göndermek olmaz.<br>
+
+						Aşağıdaki örneği deneyin. <br> 
+												</p>
+
+						<span style="color:  #333"><i >	<strong>< html><br> 
+   < head>   <br> 
+      < script type = "text/javascript"><br> 
+         < !--<br> 
+            function validation() {<br> 
+              yapılacak işlemler ... <br> 
+            }<br> 
+         //--><br> 
+      < /script> <br>      
+   < /head><br> 
+   
+   < body>   <br> 
+      < form method = "POST" action = "t.cgi" onsubmit = "return validate()"><br> 
+         .......<br> 
+         < input type = "submit" value = "Submit" /><br> 
+      < /form>      <br> 
+   < /body><br> 
+< /html></strong></span><br></i><br>
+
+						
+				
+
+					<h2 class="blog-title">onmouseover ve onmouseout Event Türü</h2>
+					<p class="blog-text">
+						Bu iki etkinlik türü, görüntülerle ve hatta metinle de güzel efektler oluşturmanıza yardımcı olacaktır. Onmouseover olay tetikleyici herhangi elemanın üzerinde fareyi getirdiğinizde ve onmouseout tetikleyicileri bu öğeden farenizi dışarı taşıdığınızda. Aşağıdaki örneği deneyin.
+												 <br>
+
+						<span style="color:  #333"><i >	<strong>< html><br>
+   < head>   <br>
+      < script type = "text/javascript"><br>
+         < !--<br>
+            function over() {<br>
+               document.write ("Mouse Over");<br>
+            }            
+            function out() {<br>
+               document.write ("Mouse Out");<br>
+            }            <br>
+         //--><br>
+      < /script>      <br>
+   < /head><br>
+   
+   < body><br>
+      < p>Sonucu görmek için farenizi bölümün içine getirin:</p>     <br> 
+      < div onmouseover = "over()" onmouseout = "out()"><br>
+         < h2> Bu bölümün içinde</h2><br>
+      < /div>         <br>
+   </ body><br>
+</ html></p><br> </span></i></strong>
+
+					
+					<br>
+					<br>
+					<br>
+					<p class="blog-text-2">
+						Diğer Başlıklar
+					</p>
+
+					<ul class="tags">
+						<li><a href="" class="tag btn " >Asp.net</a></li>
+						<li><a href="" class="tag btn">Angular</a></li>
+						<li><a href="" class="tag btn">React</a></li>
+						<li><a href="" class="tag btn">NodeJs</a></li>
+					</ul>
+
+				</div>
+			</div>
+			
+
+
+
+</body>
+
+</html>

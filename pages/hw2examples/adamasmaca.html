@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Adam_Asmaca!</title>
+</head>
+
+<body>
+<h1><center>Adam Asmaca Oyununa Hoşgeldiniz. <br>Oyunu Tekrar Başlatmak için Sayfayı Yenileyin.</center></h1>
+
+ <script>
+ // Kelimeler adlı dizi oluşturduk
+ var kelimeler = [
+ "javascript",
+ "php",
+ "node.js",
+ "angular",
+ "c#",
+ "bilgisayar",
+ "elektronik",
+ "yazılım",
+ "yönetim bilişim"
+ ];
+ // Random kelimeler oluşturduk
+ var kelime = kelimeler[Math.floor(Math.random() * kelimeler.length)];
+ // Cevapları tutacağımız diziyi ayarlayalım
+ var answerArray = [];
+ for (var i = 0; i < kelime.length; i++) {
+ answerArray[i] = "_";
+ }
+ var kalan_boyut = kelime.length;
+ // Oyun başlıyor
+ while (kalan_boyut > 0) {
+ 
+ alert(answerArray.join(" "));
+ // Oyuncudan tahmin alma
+ var tahmin = prompt("Bir harf tahmin edin veya oynatmayı durdurmak için İptal'i tıklayın.");
+ if (tahmin === null) {
+ 
+ break;
+ } else if (tahmin.length !== 1) {
+ alert("Lütfen tek bir harf girin.");
+ } else {
+ // oyun durumunu güncelleme
+ for (var j = 0; j < kelime.length; j++) {
+ if (kelime[j] === tahmin) {
+ answerArray[j] = tahmin;
+ kalan_boyut--;
+ }
+ }
+ }
+
+ // Son oyun döngüsü
+ }
+ // Oyuncu skor tablosunu gösterme
+ alert(answerArray.join(" "));
+ alert("Tebrikler! Cevap şuydu: " + kelime);
+ </script>
+</body>
+</html>
